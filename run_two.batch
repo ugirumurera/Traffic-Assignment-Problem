@@ -1,0 +1,18 @@
+#!/bin/bash -l
+#SBATCH -p regular
+#SBATCH -N 4
+#SBATCH -t 03:00:00
+#SBATCH -J my_job
+#SBATCH -o my_job.o%j
+#SBATCH -L projecta
+
+module load python/2.7-anaconda
+source activate myenv
+
+ 
+srun -n 1  -N 1  python Demand_Study.py LA 1.5 UE &
+srun -n 1  -N 1  python Demand_Study.py LA 2 UE &
+srun -n 1  -N 1  python Demand_Study.py LA 1.5 SO &
+srun -n 1  -N 1  python Demand_Study.py LA 2 SO &
+
+wait
