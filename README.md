@@ -10,3 +10,6 @@ The first argument **LA** specifies the name of the network, **0.5** means that 
 As another example:<br />
 **python Demand_Study.py ChicagoRegional 1 SO**<br />
 This command runs the Frank-Wolfe algorithm on the **Chicago Regional** Network, with the **original demand** (demand X 1), and looking for the Social Optimum **SO**.
+
+For access to network data for the **LA** network, please send email to Ugirumurera@lbl.gov <br />
+The data for the **chicago network** is available at this [github account](https://github.com/bstabler/TransportationNetworks)
